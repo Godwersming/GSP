@@ -32,11 +32,7 @@ switch ($uc) {
         include("controllers/c_visualisation_frais.php");
         break;
     }
-    case 'etatMois':
-    {
-        include("controllers/c_etatMois.php");
-        break;
-    }
+    
 }
 
 include 'views/layout/vue_pied.php';

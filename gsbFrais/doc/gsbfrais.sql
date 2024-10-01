@@ -4378,6 +4378,30 @@ INSERT INTO `comptable` (`id`, `nom`, `prenom`, `login`, `mdp`, `adresse`, `cp`,
 --
 
 --
+-- Evaluation : Création et structure de la base 'gestionnaire'
+--
+
+
+CREATE TABLE IF NOT EXISTS `gestionnaire` (
+  `id` char(4) NOT NULL,
+  `nom` char(30) DEFAULT NULL,
+  `prenom` char(30) DEFAULT NULL,
+  `login` char(20) DEFAULT NULL,
+  `mdp` char(20) DEFAULT NULL,
+  `adresse` char(30) DEFAULT NULL,
+  `cp` char(5) DEFAULT NULL,
+  `ville` char(30) DEFAULT NULL,
+  `dateEmbauche` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Evaluation :  Contenu de la table `gestionnaire`
+--
+
+INSERT INTO `gestionnaire` (`id`, `nom`, `prenom`, `login`, `mdp`, `adresse`, `cp`, `ville`, `dateEmbauche`) VALUES
+('a12', 'Benachour', 'Rayan', 'rayan', 'rayan', 'Avenue de Paris', '93270', 'Sevran', '2005-12-21');
+--
 -- Contraintes pour la table `fichefrais`
 --
 ALTER TABLE `fichefrais`

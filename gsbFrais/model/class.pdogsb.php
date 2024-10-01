@@ -137,6 +137,12 @@ class PdoGsb{
     }
 
 
+  /**
+     * Retourne les informations d'un comptable
+     * @param $login
+     * @param $mdp
+     * @return mixed L'id, le nom et le prénom sous la forme d'un tableau associatif
+     */
 
     public function estComptable($login, $mdp) {
         $req = "SELECT id, nom, prenom FROM comptable WHERE login=:login AND mdp=:mdp";
@@ -145,14 +151,21 @@ class PdoGsb{
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     
-
-    public function getInfosComptable($login, $mdp){
-        $req = "SELECT id, nom, prenom FROM comptable WHERE login=:login AND mdp=:mdp";
+      /**
+     * Retourne les informations d'un gestionnaire
+     * @param $login
+     * @param $mdp
+     * @return mixed L'id, le nom et le prénom sous la forme d'un tableau associatif
+     */
+    
+    public function estGestio($login, $mdp) {
+        $req = "SELECT id, nom, prenom FROM gestionnaire WHERE login=:login AND mdp=:mdp";
         $stmt = PdoGsb::$monPdo->prepare($req);
         $stmt->execute(array(':login' => $login, ':mdp' => $mdp));
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     
+
     ## on effectue la requête sql, en faisant un cumul
     public function getCumulFraisParVisiteur($mois, $annee, $typeFrais) {
         $date = $annee . $mois;
