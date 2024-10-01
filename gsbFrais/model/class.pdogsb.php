@@ -153,6 +153,20 @@ class PdoGsb{
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     
+    ## on effectue la requête sql, en faisant un cumul
+    public function getCumulFraisParVisiteur($mois, $annee, $typeFrais) {
+        $date = $annee . $mois;
+        $req = "SELECT v.nom, v.prenom, SUM(l.quantite * f.montant) as cumul
+                FROM visiteur v
+                JOIN fichefrais ff ON v.id = ff.idVisiteur
+                JOIN lignefraisforfait l ON ff.idVisiteur = l.idVisiteur AND ff.mois = l.mois
+                JOIN fraisforfait f ON l.idFraisForfait = f.id
+                WHERE ff.mois = :date AND l.idFraisForfait = :typeFrais
+                GROUP BY v.id";
+        $stmt = PdoGsb::$monPdo->prepare($req);
+        $stmt->execute(array(':date' => $date, ':typeFrais' => $typeFrais));
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
     
 }
 

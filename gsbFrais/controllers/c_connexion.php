@@ -23,6 +23,7 @@ switch ($action) {
                 connecter($id, $nom, $prenom);
                 $_SESSION['estComptable'] = true;
                 include 'views/v_sommaire_comptable.php';
+              //  include 'controllers/c_etatMois.php';
             } else {
                 $visiteur = $pdo->getInfosVisiteur($login, $mdp);
                 if ($visiteur) {
@@ -34,11 +35,12 @@ switch ($action) {
                     include 'views/v_sommaire.php';
                 } else {
                     ajouterErreur("Login ou mot de passe incorrect");
+                    include'views/v_menu.php';
                     include("views/v_erreurs.php");
                     include("views/v_connexion.php");
                 }
             }
-            include 'views/v_accueil.php';
+        //    include 'views/v_accueil.php';
             break;
         }
         

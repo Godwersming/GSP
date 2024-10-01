@@ -9,9 +9,8 @@
         </li>
 
         <li class="menu-item">
-            <a href="index.php?uc=connexion&action=valideConnexio" title="Etat des frais des visiteurs">Frais
-                des visiteurs</a>
-        </li>
+    <a href="index.php?uc=visualisationFrais&action=afficherFormulaire" title="Visualisation des frais">Visualisation des frais</a>
+    </li>
 
         <li class="menu-item">
             <a href="index.php?uc=connexion&action=deconnexion" title="Se déconnecter">Déconnexion</a>
@@ -19,3 +18,5 @@
     </ul>
 </nav>
 <section class="content">
+
+

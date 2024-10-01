@@ -9,8 +9,7 @@
         </li>
 
         <li class="menu-item">
-            <a href="index.php?uc=etatFrais&action=selectionnerMois" title="Consultation de mes fiches de frais">Mes
-                fiches de frais</a>
+            <a href="index.php?uc=etatFrais&action=selectionnerMois" title="Etat des frais des visiteurs par mois">Etat des frais</a>
         </li>
 
         <li class="menu-item">
