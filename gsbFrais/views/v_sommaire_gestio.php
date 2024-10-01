@@ -9,7 +9,7 @@
         </li>
 
         <li class="menu-item">
-    <a href="index.php?uc=visualisationFrais&action=afficherFormulaire" title="Visualisation des frais">Visualisation des frais</a>
+    <a href="index.php?uc=visualisationFrais&action=afficherFormulaire" title="Visualisation des frais">Page gestionnaire</a>
     </li>
 
         <li class="menu-item">
@@ -19,4 +19,5 @@
 </nav>
 <section class="content">
 
+<!-- Affiche la page à droite de l'écran quand le gestionnaire se connectera, avec ce qu'il peut apporter -->
 

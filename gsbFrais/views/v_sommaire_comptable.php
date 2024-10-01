@@ -19,4 +19,5 @@
 </nav>
 <section class="content">
 
+<!-- Affiche la page à droite de l'écran quand le comptable se connectera, avec ce qu'il peut apporter, en l'occurence ici visualiser l'ensemble des fraits de chaque utilisateur -->
 

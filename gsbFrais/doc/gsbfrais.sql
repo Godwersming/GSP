@@ -4378,7 +4378,7 @@ INSERT INTO `comptable` (`id`, `nom`, `prenom`, `login`, `mdp`, `adresse`, `cp`,
 --
 
 --
--- Evaluation : Création et structure de la base 'gestionnaire'
+-- Evaluation : Création et structure de la base 'gestionnaire', grâce à CREATE TABLE
 --
 
 
@@ -4396,7 +4396,7 @@ CREATE TABLE IF NOT EXISTS `gestionnaire` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Evaluation :  Contenu de la table `gestionnaire`
+-- Evaluation :  Mise en place du Contenu de la table `gestionnaire` avec INSERT INTO
 --
 
 INSERT INTO `gestionnaire` (`id`, `nom`, `prenom`, `login`, `mdp`, `adresse`, `cp`, `ville`, `dateEmbauche`) VALUES
